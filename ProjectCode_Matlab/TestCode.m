@@ -6,30 +6,27 @@ fid = fopen( 'test_1edited.csv', 'r' );
 ang = textscan( fid, '%*d%d%*d%*d', 'Delimiter',',', 'Headerlines',1 );
 fclose( fid ); 
 
-disp(dist);
-disp(ang);
-
 dist = cell2mat(dist);
 ang = cell2mat(ang);
 dist = double(dist);
 ang = double(ang);
 
-disp(dist);
-disp(ang);
-
-%[x,y] = pol2cart(ang,dist);
 x = cos(ang*(pi/180));
 x = dist.*x;
 y = sin(ang*(pi/180));
 y = dist.*y;
 
-figure 
-scatterplot([x,y]);
+scatter(x,y,5,'filled');
+ax = gca;
+ax.Title.String = 'Lidar Scan of Room';
+ax.XLim = [-500,500];
+ax.YLim = [-500,500];
+ax.XAxisLocation = 'origin';
+ax.YAxisLocation = 'origin';
+ax.XGrid = 'on';
+ax.YGrid = 'on';
+ax.Box = 'on';
 
 
-%polarplot(ang{1,1},dist{1,1})
-%pax = gca;
-%pax.ThetaZeroLocation = 'top';
-%pax.RLim = [0 500];
 
 
