@@ -1,0 +1,20 @@
+Hardware to do:
+
+-Find an LCD compatible with our needs
+	-Arduino
+	-I2C
+	-Comes with an easy to use library
+	-large enough to show our map
+
+-Design enclosure for the LCD and mounting method to connect it to the enclosure
+
+-Design enclosure for the device
+	-Mounting point to the camera stabiliser
+	-Mounting point for the LCD
+	-Mounting point for the lidar
+
+-Design PCB for all necessary hardware
+	-Consider battery needs
+
+-Buy battery for the whole system
+	-The lidar might not be getting enough power
