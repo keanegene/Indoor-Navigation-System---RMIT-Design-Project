@@ -1,8 +1,11 @@
-fid = fopen( 'test_1edited.csv', 'r' ); 
+file = 'room_walk_horseshoe.csv';
+%file = 'test_1.csv';
+
+fid = fopen( file, 'r' ); 
 dist = textscan( fid, '%*d%*d%d%*d', 'Delimiter',',', 'Headerlines',1 );
 fclose( fid ); 
 
-fid = fopen( 'test_1edited.csv', 'r' ); 
+fid = fopen( file, 'r' ); 
 ang = textscan( fid, '%*d%d%*d%*d', 'Delimiter',',', 'Headerlines',1 );
 fclose( fid ); 
 
