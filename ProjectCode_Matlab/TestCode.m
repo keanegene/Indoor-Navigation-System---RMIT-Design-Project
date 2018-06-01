@@ -1,4 +1,5 @@
 file = 'room_walk_horseshoe.csv';
+%file = 'stationary_lidar.csv';
 %file = 'test_1.csv';
 
 fid = fopen( file, 'r' ); 
@@ -13,7 +14,7 @@ dist = cell2mat(dist);
 ang = cell2mat(ang);
 dist = double(dist);
 ang = double(ang);
-
+    
 x = cos(ang*(pi/180));
 x = dist.*x;
 y = sin(ang*(pi/180));
@@ -29,7 +30,3 @@ ax.YAxisLocation = 'origin';
 ax.XGrid = 'on';
 ax.YGrid = 'on';
 ax.Box = 'on';
-
-
-
-
